@@ -18,7 +18,7 @@ const SportsPage = () => {
       summary: "Underdog nations secure crucial victories while traditional powerhouses struggle in dramatic qualification matches.",
       category: "Sports",
       timestamp: "15 minutes ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "SP/WC.jpg"
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const SportsPage = () => {
       summary: "Rising star defeats three-time champion in straight sets to claim maiden major title in historic breakthrough.",
       category: "Sports",
       timestamp: "1 hour ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "SP/G.jpg"
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const SportsPage = () => {
       summary: "Multi-team deal involving All-Star players creates new title contenders and shifts playoff predictions.",
       category: "Sports",
       timestamp: "3 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "SP/BB.webp"
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ const SportsPage = () => {
       summary: "Multiple world records broken as swimmers prepare for international competition with exceptional performances.",
       category: "Sports",
       timestamp: "5 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "SP/SW.jpg"
     },
     {
       id: 5,
@@ -50,7 +50,7 @@ const SportsPage = () => {
       summary: "Heavyweight championship bout breaks pay-per-view records with global audience exceeding 50 million viewers.",
       category: "Sports",
       timestamp: "7 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "SP/BM.jpg"
     },
     {
       id: 6,
@@ -58,7 +58,7 @@ const SportsPage = () => {
       summary: "Championship leaders separated by just three points heading into final race at iconic Monaco circuit.",
       category: "Sports",
       timestamp: "9 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "SP/F.jpg"
     },
     {
       id: 7,
@@ -66,7 +66,7 @@ const SportsPage = () => {
       summary: "Professional women's football adds four new franchises as popularity and attendance reach record levels.",
       category: "Sports",
       timestamp: "11 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "SP/WS.png"
     },
     {
       id: 8,
@@ -74,7 +74,7 @@ const SportsPage = () => {
       summary: "Competitive gaming reaches new heights with largest purse in tournament history and global streaming audience.",
       category: "Sports",
       timestamp: "13 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "SP/ES.webp"
     },
     {
       id: 9,
@@ -82,7 +82,7 @@ const SportsPage = () => {
       summary: "Kenyan runner shatters long-standing mark in perfect conditions with revolutionary pacing strategy.",
       category: "Sports",
       timestamp: "15 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "SP/M.jpg"
     },
     {
       id: 10,
@@ -90,7 +90,7 @@ const SportsPage = () => {
       summary: "Basketball prodigy becomes youngest player ever to receive major sponsorship before college career.",
       category: "Sports",
       timestamp: "17 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "SP/HA.jpg"
     }
   ];
 

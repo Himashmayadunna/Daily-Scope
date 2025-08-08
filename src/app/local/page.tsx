@@ -18,7 +18,7 @@ const LocalPage = () => {
       summary: "Century-old venue reopens with modern amenities while preserving original architectural charm and cultural heritage.",
       category: "Local",
       timestamp: "1 hour ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Local/HC.jpg"
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const LocalPage = () => {
       summary: "State-of-the-art facility offers specialized treatments and reduces travel time for residents seeking quality care.",
       category: "Local",
       timestamp: "3 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Local/MC.jpg"
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const LocalPage = () => {
       summary: "Software development company expands operations and commits to hiring exclusively from the local talent pool.",
       category: "Local",
       timestamp: "5 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Local/TS.jpg"
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ const LocalPage = () => {
       summary: "Community volunteers clean up riverside areas and implement new recycling programs across neighborhoods.",
       category: "Local",
       timestamp: "7 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Local/EI.jpg"
     },
     {
       id: 5,
@@ -50,7 +50,7 @@ const LocalPage = () => {
       summary: "Multi-million dollar athletic center provides training opportunities for aspiring young athletes in various sports.",
       category: "Local",
       timestamp: "9 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Local/YC.jpg"
     },
     {
       id: 6,
@@ -58,7 +58,7 @@ const LocalPage = () => {
       summary: "Weekly market showcases local agriculture and artisanal products while supporting small business growth.",
       category: "Local",
       timestamp: "11 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Local/FM.jpg"
     },
     {
       id: 7,
@@ -66,7 +66,7 @@ const LocalPage = () => {
       summary: "Federal recognition protects architectural treasures and provides funding for preservation efforts.",
       category: "Local",
       timestamp: "13 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Local/HN.jpg"
     },
     {
       id: 8,
@@ -74,7 +74,7 @@ const LocalPage = () => {
       summary: "Cutting-edge facility focuses on solar and wind technology innovation with potential commercial applications.",
       category: "Local",
       timestamp: "15 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Local/LU.jpg"
     },
     {
       id: 9,
@@ -82,7 +82,7 @@ const LocalPage = () => {
       summary: "Increased volunteer support and donations enable organization to address growing food insecurity challenges.",
       category: "Local",
       timestamp: "17 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Local/FB.jpg"
     },
     {
       id: 10,
@@ -90,7 +90,7 @@ const LocalPage = () => {
       summary: "New bus lines connect outlying areas to city center, improving access to employment and services.",
       category: "Local",
       timestamp: "19 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Local/PT.jpg"
     }
   ];
 

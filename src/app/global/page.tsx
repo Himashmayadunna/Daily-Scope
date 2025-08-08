@@ -18,7 +18,7 @@ const GlobalPage = () => {
       summary: "World leaders commit to carbon neutrality by 2040 and establish $500 billion green technology fund for developing nations.",
       category: "Global",
       timestamp: "30 minutes ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Global/G2.webp"
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const GlobalPage = () => {
       summary: "Space agencies from 15 countries collaborate on ambitious plan to establish permanent human settlement on Mars by 2035.",
       category: "Global",
       timestamp: "2 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Global/MARS.jpg"
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const GlobalPage = () => {
       summary: "Satellite constellation project successfully connects remote regions worldwide, bridging digital divide for billions.",
       category: "Global",
       timestamp: "4 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Global/GI.png"
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ const GlobalPage = () => {
       summary: "Advanced filtration systems remove 50 million tons of plastic waste from Pacific garbage patches in two years.",
       category: "Global",
       timestamp: "6 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Global/OC.jpg"
     },
     {
       id: 5,
@@ -50,7 +50,7 @@ const GlobalPage = () => {
       summary: "Positive results from pilot programs prompt 20 nations to implement wider-scale economic support systems.",
       category: "Global",
       timestamp: "8 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Global/UBI.webp"
     },
     {
       id: 6,
@@ -58,7 +58,7 @@ const GlobalPage = () => {
       summary: "Coordinated vaccination and prevention campaign achieves zero transmission milestone across affected regions.",
       category: "Global",
       timestamp: "10 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Global/WH.jpg"
     },
     {
       id: 7,
@@ -66,7 +66,7 @@ const GlobalPage = () => {
       summary: "Cultural and educational initiative breaks participation records, fostering global understanding among youth.",
       category: "Global",
       timestamp: "12 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Global/IS.jpg"
     },
     {
       id: 8,
@@ -74,7 +74,7 @@ const GlobalPage = () => {
       summary: "AI-powered distribution system and early warning technology successfully avert humanitarian crisis in drought regions.",
       category: "Global",
       timestamp: "14 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Global/GF.png"
     },
     {
       id: 9,
@@ -82,7 +82,7 @@ const GlobalPage = () => {
       summary: "International scientific team identifies 50 previously unknown marine organisms beneath ice sheets.",
       category: "Global",
       timestamp: "16 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Global/RS.jpg"
     },
     {
       id: 10,
@@ -90,7 +90,7 @@ const GlobalPage = () => {
       summary: "New regulations address cryptocurrency transactions and protect consumer rights in global e-commerce.",
       category: "Global",
       timestamp: "18 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Global/WTO.jpg"
     }
   ];
 

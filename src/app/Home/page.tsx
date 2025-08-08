@@ -14,51 +14,59 @@ const HomePage = () => {
   const latestNews: NewsItem[] = [
     {
       id: 1,
-      title: "Global Markets Surge Amid Economic Recovery",
-      summary: "Stock markets worldwide show positive momentum as economic indicators suggest recovery.",
+      title: "Trump's sweeping new tariffs take effect against dozens of countries",
+      summary: "Just before the deadline for deals to be agreed to cut or avoid the import taxes Trump posted on his Truth Social platform that billions of dollars were now flowing into the US due to tariffs.",
       category: "Business",
       timestamp: "2 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Home/Trump.jpg"
     },
     {
       id: 2,
-      title: "Local Community Center Opens New Youth Programs",
-      summary: "The downtown community center launches innovative programs for local youth development.",
+      title: "No agreement finalized to reduce US tariff on Sri Lanka – President",
+      summary: "President Anura Kumara Dissanayake says that no agreement has been finalized or signed to reduce the reciprocal tariff imposed by the United States on Sri Lankan exports to 20%.",
       category: "Local",
       timestamp: "4 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Home/SLP.jpg"
     },
     {
       id: 3,
-      title: "Championship Finals Set for This Weekend",
-      summary: "Two powerhouse teams prepare for the most anticipated match of the season.",
+      title: "India beat England by 6 runs in most dramatic World Cup match.",
+      summary: "India defeated England by 6 runs in the fifth and final Test match, leveling the five-match series 2-2. With this emphatic win, India denied England a series victory and showcased their resilience in the longest format of the game.",
       category: "Sports",
       timestamp: "6 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Home/SP.jpg"
     },
     {
       id: 4,
-      title: "International Climate Summit Begins",
-      summary: "World leaders gather to discuss critical environmental policies and agreements.",
+      title: "OpenAI claims GPT-5 model boosts ChatGPT to ‘PhD level’",
+      summary: "ChatGPT-maker OpenAI has unveiled the long-awaited latest version of its artificial intelligence (AI) chatbot, GPT-5, saying it can provide PhD-level expertise.Billed as “smarter, faster, and more useful,” OpenAI co-founder and chief executive Sam Altman lauded the company’s new model as ushering in a new era of ChatGPT.",
       category: "Global",
       timestamp: "8 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Home/chat.jpg"
     },
     {
       id: 5,
-      title: "Tech Innovation Hub Announces Expansion",
+      title: "Truth about satellite launch and funding clear after 13 years",
       summary: "Major technology companies plan significant investments in emerging markets.",
       category: "Business",
       timestamp: "10 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Home/bis1.jpg"
     },
     {
       id: 6,
-      title: "City Council Approves New Transportation Plan",
+      title: "Sri Lanka makes strides in prevention and care of cervical cancer",
       summary: "Comprehensive public transit improvements approved for implementation next year.",
       category: "Local",
       timestamp: "12 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "Home/cancer.jpg"
+    },
+    {
+      id: 7,
+      title: "Israeli plan for Gaza takeover must be halted immediately",
+      summary: "Comprehensive public transit  approved for implementation next year.",
+      category: "Global",
+      timestamp: "12 hous ago",
+      imageUrl: "Home/Isreal.jpg"
     }
   ];
 
@@ -75,7 +83,7 @@ const HomePage = () => {
             <section className="featured-section">
               <h2>Breaking News</h2>
               <article className="featured-article">
-                <img src={featuredNews.imageUrl} alt={featuredNews.title} />
+                <img src="Home/Trump.jpg" alt={featuredNews.title} />
                 <div className="featured-content">
                   <span className="category">{featuredNews.category}</span>
                   <h3>{featuredNews.title}</h3>

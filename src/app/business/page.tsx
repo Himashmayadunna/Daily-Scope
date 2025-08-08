@@ -18,7 +18,7 @@ const BusinessPage = () => {
       summary: "Machine learning algorithms now handle 80% of trading decisions as banks embrace artificial intelligence for fraud detection and customer service.",
       category: "Business",
       timestamp: "45 minutes ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "biz/ml1.webp"
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const BusinessPage = () => {
       summary: "Major automakers report unprecedented demand for EVs as charging infrastructure expands and battery costs plummet.",
       category: "Business",
       timestamp: "2 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "biz/EC.jpg"
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const BusinessPage = () => {
       summary: "Revolutionary quantum processor promises to solve complex problems in drug discovery, weather prediction, and financial modeling.",
       category: "Business",
       timestamp: "4 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "biz/QC.jpg"
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ const BusinessPage = () => {
       summary: "Companies invest heavily in diversified manufacturing networks and AI-powered logistics to prevent future disruptions.",
       category: "Business",
       timestamp: "6 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "biz/SC.jpg"
     },
     {
       id: 5,
@@ -50,7 +50,7 @@ const BusinessPage = () => {
       summary: "Eco-friendly clothing company's IPO reflects growing consumer demand for environmentally responsible products.",
       category: "Business",
       timestamp: "8 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "biz/SF.jpg"
     },
     {
       id: 6,
@@ -58,7 +58,7 @@ const BusinessPage = () => {
       summary: "Commercial space flights become increasingly accessible as multiple companies compete for orbital tourism market.",
       category: "Business",
       timestamp: "10 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "biz/STM.png"
     },
     {
       id: 7,
@@ -66,7 +66,7 @@ const BusinessPage = () => {
       summary: "Cultured protein products now cost-competitive with traditional meat as production scales reach commercial viability.",
       category: "Business",
       timestamp: "12 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "biz/B.WEBP"
     },
     {
       id: 8,
@@ -74,7 +74,7 @@ const BusinessPage = () => {
       summary: "Government-backed digital currencies tested in major economies show potential to revolutionize monetary systems.",
       category: "Business",
       timestamp: "14 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "biz/CB.jpg"
     },
     {
       id: 9,
@@ -82,7 +82,7 @@ const BusinessPage = () => {
       summary: "Virtual reality collaboration platforms see massive adoption as hybrid work becomes the new standard.",
       category: "Business",
       timestamp: "16 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "biz/RW.jpg"
     },
     {
       id: 10,
@@ -90,7 +90,7 @@ const BusinessPage = () => {
       summary: "Environmental finance instruments attract unprecedented investment as climate targets drive capital allocation.",
       category: "Business",
       timestamp: "18 hours ago",
-      imageUrl: "/api/placeholder/300/200"
+      imageUrl: "biz/GB.jpg"
     }
   ];
 
