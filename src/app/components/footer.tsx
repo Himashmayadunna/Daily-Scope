@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
         { name: 'Local News', href: '/local' },
         { name: 'Sports', href: '/sports' },
         { name: 'Global News', href: '/global' },
-        { name: 'Breaking News', href: '/breaking' },
+        { name: 'Breaking News', href: '/' },
       ]
     },
     company: {

@@ -1,19 +1,15 @@
 'use client';
 import Link from 'next/link';
-
-interface NewsItem {
-  id: number;
-  title: string;
-  summary: string;
-  category: string;
-  timestamp: string;
-  imageUrl: string;
-}
+import { getNewsByCategory, getAllNews } from '../data/newsData';
 
 const BusinessPage = () => {
-  const businessNews: NewsItem[] = [
+  // Get business news from our centralized data + create additional business items
+  const allBusinessNews = getNewsByCategory('Business');
+  
+  // Create additional business news items with proper IDs
+  const additionalBusinessNews = [
     {
-      id: 1,
+      id: 101,
       title: "AI Revolution Transforms Financial Services Industry",
       summary: "Machine learning algorithms now handle 80% of trading decisions as banks embrace artificial intelligence for fraud detection and customer service.",
       category: "Business",
@@ -21,7 +17,7 @@ const BusinessPage = () => {
       imageUrl: "biz/ml1.webp"
     },
     {
-      id: 2,
+      id: 102,
       title: "Electric Vehicle Sales Surge 300% Year-Over-Year",
       summary: "Major automakers report unprecedented demand for EVs as charging infrastructure expands and battery costs plummet.",
       category: "Business",
@@ -29,7 +25,7 @@ const BusinessPage = () => {
       imageUrl: "biz/EC.jpg"
     },
     {
-      id: 3,
+      id: 103,
       title: "Quantum Computing Startup Raises $2.5 Billion",
       summary: "Revolutionary quantum processor promises to solve complex problems in drug discovery, weather prediction, and financial modeling.",
       category: "Business",
@@ -37,7 +33,7 @@ const BusinessPage = () => {
       imageUrl: "biz/QC.jpg"
     },
     {
-      id: 4,
+      id: 104,
       title: "Global Supply Chain Resilience Reaches New Heights",
       summary: "Companies invest heavily in diversified manufacturing networks and AI-powered logistics to prevent future disruptions.",
       category: "Business",
@@ -45,7 +41,7 @@ const BusinessPage = () => {
       imageUrl: "biz/SC.jpg"
     },
     {
-      id: 5,
+      id: 105,
       title: "Sustainable Fashion Brand Goes Public with $8B Valuation",
       summary: "Eco-friendly clothing company's IPO reflects growing consumer demand for environmentally responsible products.",
       category: "Business",
@@ -53,7 +49,7 @@ const BusinessPage = () => {
       imageUrl: "biz/SF.jpg"
     },
     {
-      id: 6,
+      id: 106,
       title: "Space Tourism Market Expected to Reach $15 Billion",
       summary: "Commercial space flights become increasingly accessible as multiple companies compete for orbital tourism market.",
       category: "Business",
@@ -61,7 +57,7 @@ const BusinessPage = () => {
       imageUrl: "biz/STM.png"
     },
     {
-      id: 7,
+      id: 107,
       title: "Biotech Breakthrough: Lab-Grown Meat Hits Supermarkets",
       summary: "Cultured protein products now cost-competitive with traditional meat as production scales reach commercial viability.",
       category: "Business",
@@ -69,7 +65,7 @@ const BusinessPage = () => {
       imageUrl: "biz/B.WEBP"
     },
     {
-      id: 8,
+      id: 108,
       title: "Digital Currency Central Bank Pilots Show Promise",
       summary: "Government-backed digital currencies tested in major economies show potential to revolutionize monetary systems.",
       category: "Business",
@@ -77,7 +73,7 @@ const BusinessPage = () => {
       imageUrl: "biz/CB.jpg"
     },
     {
-      id: 9,
+      id: 109,
       title: "Remote Work Technology Stock Soars 250%",
       summary: "Virtual reality collaboration platforms see massive adoption as hybrid work becomes the new standard.",
       category: "Business",
@@ -85,7 +81,7 @@ const BusinessPage = () => {
       imageUrl: "biz/RW.jpg"
     },
     {
-      id: 10,
+      id: 110,
       title: "Green Bond Issuance Hits Record $500 Billion",
       summary: "Environmental finance instruments attract unprecedented investment as climate targets drive capital allocation.",
       category: "Business",
@@ -94,9 +90,12 @@ const BusinessPage = () => {
     }
   ];
 
+  // Combine all business news - prioritize our main news data
+  const businessNews = [...allBusinessNews, ...additionalBusinessNews];
+
   const featuredNews = businessNews[0];
-  const recentNews = businessNews.slice(1, 4);
-  const sidebarNews = businessNews.slice(4);
+  const recentNews = businessNews.slice(1, 7);
+  const sidebarNews = businessNews.slice(7);
 
   return (
     <div className="homepage">
@@ -106,7 +105,7 @@ const BusinessPage = () => {
             {/* Featured News */}
             <section className="featured-section">
               <h2>Business Headlines</h2>
-              <article className="featured-article">
+              <Link href={`/news/${featuredNews.id}`} className="featured-article">
                 <img src={featuredNews.imageUrl} alt={featuredNews.title} />
                 <div className="featured-content">
                   <span className="category">{featuredNews.category}</span>
@@ -114,7 +113,7 @@ const BusinessPage = () => {
                   <p>{featuredNews.summary}</p>
                   <span className="timestamp">{featuredNews.timestamp}</span>
                 </div>
-              </article>
+              </Link>
             </section>
 
             {/* Recent News Grid */}
@@ -122,7 +121,7 @@ const BusinessPage = () => {
               <h2>Market Updates</h2>
               <div className="news-grid">
                 {recentNews.map(news => (
-                  <article key={news.id} className="news-card">
+                  <Link key={news.id} href={`/news/${news.id}`} className="news-card">
                     <img src={news.imageUrl} alt={news.title} />
                     <div className="card-content">
                       <span className="category">{news.category}</span>
@@ -130,7 +129,7 @@ const BusinessPage = () => {
                       <p>{news.summary}</p>
                       <span className="timestamp">{news.timestamp}</span>
                     </div>
-                  </article>
+                  </Link>
                 ))}
               </div>
             </section>
@@ -140,14 +139,14 @@ const BusinessPage = () => {
               <div className="sidebar-section">
                 <h3>More Business News</h3>
                 {sidebarNews.map(news => (
-                  <article key={news.id} className="sidebar-item">
+                  <Link key={news.id} href={`/news/${news.id}`} className="sidebar-item">
                     <img src={news.imageUrl} alt={news.title} />
                     <div className="sidebar-content">
                       <span className="category">{news.category}</span>
                       <h5>{news.title}</h5>
                       <span className="timestamp">{news.timestamp}</span>
                     </div>
-                  </article>
+                  </Link>
                 ))}
               </div>
 
