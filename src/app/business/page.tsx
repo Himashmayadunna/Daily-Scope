@@ -63,7 +63,7 @@ const BusinessPage = () => {
       summary: "Cultured protein products now cost-competitive with traditional meat as production scales reach commercial viability.",
       category: "Business",
       timestamp: "12 hours ago",
-      imageUrl: "/biz/B.WEBP"
+      imageUrl: "/biz/BEE.jpg"
     },
     {
       id: 108,
