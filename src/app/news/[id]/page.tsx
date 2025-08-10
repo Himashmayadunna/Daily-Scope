@@ -44,7 +44,7 @@ const NewsArticlePage = () => {
     return (
       <div className={styles.notFound}>
         <h1>Article Not Found</h1>
-        <p>The article you're looking for doesn't exist.</p>
+        <p>The article you&apos;re looking for doesn&apos;t exist.</p>
         <Link href="/" className={styles.backButton}>
           Return to Home
         </Link>

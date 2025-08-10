@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
-import { getNewsByCategory, getAllNews } from '../data/newsData';
+import Image from 'next/image';
+import { getNewsByCategory } from '../data/newsData';
 
 const BusinessPage = () => {
   // Get business news from our centralized data + create additional business items
@@ -14,7 +15,7 @@ const BusinessPage = () => {
       summary: "Machine learning algorithms now handle 80% of trading decisions as banks embrace artificial intelligence for fraud detection and customer service.",
       category: "Business",
       timestamp: "45 minutes ago",
-      imageUrl: "biz/ml1.webp"
+      imageUrl: "/biz/ml1.webp"
     },
     {
       id: 102,
@@ -22,7 +23,7 @@ const BusinessPage = () => {
       summary: "Major automakers report unprecedented demand for EVs as charging infrastructure expands and battery costs plummet.",
       category: "Business",
       timestamp: "2 hours ago",
-      imageUrl: "biz/EC.jpg"
+      imageUrl: "/biz/EC.jpg"
     },
     {
       id: 103,
@@ -30,7 +31,7 @@ const BusinessPage = () => {
       summary: "Revolutionary quantum processor promises to solve complex problems in drug discovery, weather prediction, and financial modeling.",
       category: "Business",
       timestamp: "4 hours ago",
-      imageUrl: "biz/QC.jpg"
+      imageUrl: "/biz/QC.jpg"
     },
     {
       id: 104,
@@ -38,7 +39,7 @@ const BusinessPage = () => {
       summary: "Companies invest heavily in diversified manufacturing networks and AI-powered logistics to prevent future disruptions.",
       category: "Business",
       timestamp: "6 hours ago",
-      imageUrl: "biz/SC.jpg"
+      imageUrl: "/biz/SC.jpg"
     },
     {
       id: 105,
@@ -46,7 +47,7 @@ const BusinessPage = () => {
       summary: "Eco-friendly clothing company's IPO reflects growing consumer demand for environmentally responsible products.",
       category: "Business",
       timestamp: "8 hours ago",
-      imageUrl: "biz/SF.jpg"
+      imageUrl: "/biz/SF.jpg"
     },
     {
       id: 106,
@@ -54,7 +55,7 @@ const BusinessPage = () => {
       summary: "Commercial space flights become increasingly accessible as multiple companies compete for orbital tourism market.",
       category: "Business",
       timestamp: "10 hours ago",
-      imageUrl: "biz/STM.png"
+      imageUrl: "/biz/STM.png"
     },
     {
       id: 107,
@@ -62,7 +63,7 @@ const BusinessPage = () => {
       summary: "Cultured protein products now cost-competitive with traditional meat as production scales reach commercial viability.",
       category: "Business",
       timestamp: "12 hours ago",
-      imageUrl: "biz/B.WEBP"
+      imageUrl: "/biz/B.WEBP"
     },
     {
       id: 108,
@@ -70,7 +71,7 @@ const BusinessPage = () => {
       summary: "Government-backed digital currencies tested in major economies show potential to revolutionize monetary systems.",
       category: "Business",
       timestamp: "14 hours ago",
-      imageUrl: "biz/CB.jpg"
+      imageUrl: "/biz/CB.jpg"
     },
     {
       id: 109,
@@ -78,7 +79,7 @@ const BusinessPage = () => {
       summary: "Virtual reality collaboration platforms see massive adoption as hybrid work becomes the new standard.",
       category: "Business",
       timestamp: "16 hours ago",
-      imageUrl: "biz/RW.jpg"
+      imageUrl: "/biz/RW.jpg"
     },
     {
       id: 110,
@@ -86,7 +87,7 @@ const BusinessPage = () => {
       summary: "Environmental finance instruments attract unprecedented investment as climate targets drive capital allocation.",
       category: "Business",
       timestamp: "18 hours ago",
-      imageUrl: "biz/GB.jpg"
+      imageUrl: "/biz/GB.jpg"
     }
   ];
 
@@ -106,7 +107,13 @@ const BusinessPage = () => {
             <section className="featured-section">
               <h2>Business Headlines</h2>
               <Link href={`/news/${featuredNews.id}`} className="featured-article">
-                <img src={featuredNews.imageUrl} alt={featuredNews.title} />
+                <Image 
+                  src={featuredNews.imageUrl} 
+                  alt={featuredNews.title} 
+                  width={600} 
+                  height={450}
+                  className="featured-image"
+                />
                 <div className="featured-content">
                   <span className="category">{featuredNews.category}</span>
                   <h3>{featuredNews.title}</h3>
@@ -122,7 +129,13 @@ const BusinessPage = () => {
               <div className="news-grid">
                 {recentNews.map(news => (
                   <Link key={news.id} href={`/news/${news.id}`} className="news-card">
-                    <img src={news.imageUrl} alt={news.title} />
+                    <Image 
+                      src={news.imageUrl} 
+                      alt={news.title} 
+                      width={300} 
+                      height={200}
+                      className="card-image"
+                    />
                     <div className="card-content">
                       <span className="category">{news.category}</span>
                       <h4>{news.title}</h4>
@@ -140,7 +153,13 @@ const BusinessPage = () => {
                 <h3>More Business News</h3>
                 {sidebarNews.map(news => (
                   <Link key={news.id} href={`/news/${news.id}`} className="sidebar-item">
-                    <img src={news.imageUrl} alt={news.title} />
+                    <Image 
+                      src={news.imageUrl} 
+                      alt={news.title} 
+                      width={100} 
+                      height={80}
+                      className="sidebar-image"
+                    />
                     <div className="sidebar-content">
                       <span className="category">{news.category}</span>
                       <h5>{news.title}</h5>

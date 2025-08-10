@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getNewsByCategory } from '../data/newsData';
 
 const LocalPage = () => {
@@ -14,7 +15,7 @@ const LocalPage = () => {
       summary: "Century-old venue reopens with modern amenities while preserving original architectural charm and cultural heritage.",
       category: "Local",
       timestamp: "1 hour ago",
-      imageUrl: "Local/HC.jpg"
+      imageUrl: "/Local/HC.jpg"
     },
     {
       id: 302,
@@ -22,7 +23,7 @@ const LocalPage = () => {
       summary: "State-of-the-art facility offers specialized treatments and reduces travel time for residents seeking quality care.",
       category: "Local",
       timestamp: "3 hours ago",
-      imageUrl: "Local/MC.jpg"
+      imageUrl: "/Local/MC.jpg"
     },
     {
       id: 303,
@@ -30,7 +31,7 @@ const LocalPage = () => {
       summary: "Software development company expands operations and commits to hiring exclusively from the local talent pool.",
       category: "Local",
       timestamp: "5 hours ago",
-      imageUrl: "Local/TS.jpg"
+      imageUrl: "/Local/TS.jpg"
     },
     {
       id: 304,
@@ -38,7 +39,7 @@ const LocalPage = () => {
       summary: "Community volunteers clean up riverside areas and implement new recycling programs across neighborhoods.",
       category: "Local",
       timestamp: "7 hours ago",
-      imageUrl: "Local/EI.jpg"
+      imageUrl: "/Local/EI.jpg"
     },
     {
       id: 305,
@@ -46,7 +47,7 @@ const LocalPage = () => {
       summary: "Multi-million dollar athletic center provides training opportunities for aspiring young athletes in various sports.",
       category: "Local",
       timestamp: "9 hours ago",
-      imageUrl: "Local/YC.jpg"
+      imageUrl: "/Local/YC.jpg"
     },
     {
       id: 306,
@@ -54,7 +55,7 @@ const LocalPage = () => {
       summary: "Weekly market showcases local agriculture and artisanal products while supporting small business growth.",
       category: "Local",
       timestamp: "11 hours ago",
-      imageUrl: "Local/FM.jpg"
+      imageUrl: "/Local/FM.jpg"
     },
     {
       id: 307,
@@ -62,7 +63,7 @@ const LocalPage = () => {
       summary: "Federal recognition protects architectural treasures and provides funding for preservation efforts.",
       category: "Local",
       timestamp: "13 hours ago",
-      imageUrl: "Local/HN.jpg"
+      imageUrl: "/Local/HN.jpg"
     },
     {
       id: 308,
@@ -70,7 +71,7 @@ const LocalPage = () => {
       summary: "Cutting-edge facility focuses on solar and wind technology innovation with potential commercial applications.",
       category: "Local",
       timestamp: "15 hours ago",
-      imageUrl: "Local/LU.jpg"
+      imageUrl: "/Local/LU.jpg"
     },
     {
       id: 309,
@@ -78,7 +79,7 @@ const LocalPage = () => {
       summary: "Increased volunteer support and donations enable organization to address growing food insecurity challenges.",
       category: "Local",
       timestamp: "17 hours ago",
-      imageUrl: "Local/FB.jpg"
+      imageUrl: "/Local/FB.jpg"
     },
     {
       id: 310,
@@ -86,7 +87,7 @@ const LocalPage = () => {
       summary: "New bus lines connect outlying areas to city center, improving access to employment and services.",
       category: "Local",
       timestamp: "19 hours ago",
-      imageUrl: "Local/PT.jpg"
+      imageUrl: "/Local/PT.jpg"
     }
   ];
 
@@ -107,7 +108,13 @@ const LocalPage = () => {
               <h2>Local Headlines</h2>
               <Link href={`/news/${featuredNews.id}`} className="clickable-item">
                 <article className="featured-article">
-                  <img src={featuredNews.imageUrl} alt={featuredNews.title} />
+                  <Image 
+                    src={featuredNews.imageUrl} 
+                    alt={featuredNews.title} 
+                    width={800}
+                    height={400}
+                    className="featured-image"
+                  />
                   <div className="featured-content">
                     <span className="category">{featuredNews.category}</span>
                     <h3>{featuredNews.title}</h3>
@@ -125,7 +132,13 @@ const LocalPage = () => {
                 {recentNews.map(news => (
                   <Link key={news.id} href={`/news/${news.id}`} className="clickable-item">
                     <article className="news-card">
-                      <img src={news.imageUrl} alt={news.title} />
+                      <Image 
+                        src={news.imageUrl} 
+                        alt={news.title} 
+                        width={400}
+                        height={250}
+                        className="card-image"
+                      />
                       <div className="card-content">
                         <span className="category">{news.category}</span>
                         <h4>{news.title}</h4>
@@ -145,7 +158,13 @@ const LocalPage = () => {
                 {sidebarNews.map(news => (
                   <Link key={news.id} href={`/news/${news.id}`} className="clickable-item">
                     <article className="sidebar-item">
-                      <img src={news.imageUrl} alt={news.title} />
+                      <Image 
+                        src={news.imageUrl} 
+                        alt={news.title} 
+                        width={80}
+                        height={60}
+                        className="sidebar-image"
+                      />
                       <div className="sidebar-content">
                         <span className="category">{news.category}</span>
                         <h5>{news.title}</h5>

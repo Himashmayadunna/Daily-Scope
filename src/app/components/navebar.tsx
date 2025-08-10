@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Search, ChevronDown } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 import styles from '../Styles/Navbar.module.css'
 
 interface NavigationItem {
