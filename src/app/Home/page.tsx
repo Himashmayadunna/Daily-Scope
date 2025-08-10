@@ -67,12 +67,44 @@ const HomePage = () => {
       category: "Global",
       timestamp: "12 hous ago",
       imageUrl: "Home/Isreal.jpg"
-    }
+    },
+    {
+      id: 8,
+      title: "People panic and flee after 3 people injured in Times Square shooting",
+      summary: "Comprehensive public transit improvements approved for implementation next year.",
+      category: "Local",
+      timestamp: "12 hours ago",
+      imageUrl: "Home/PO.jpg"
+    },
+    {
+      id: 9,
+      title: "President visits the Chief Prelates of Malwathu and Asgiri Chapters",
+      summary: "Comprehensive public transit improvements approved for implementation next year.",
+      category: "Local",
+      timestamp: "12 hours ago",
+      imageUrl: "Home/PC.jpg"
+    },
+    {
+      id: 10,
+      title: "Pakistan batter Haider Ali suspended by PCB after arrest in England over alleged rape",
+      summary: "Comprehensive public transit improvements approved for implementation next year.",
+      category: "sport",
+      timestamp: "12 hours ago",
+      imageUrl: "Home/PK.jpg"
+    },
+    {
+      id: 11,
+      title: "Two Sri Lankans held for attempted ganja smuggling in India.",
+      summary: "Comprehensive public transit improvements approved for implementation next year.",
+      category: "Globel",
+      timestamp: "12 hours ago",
+      imageUrl: "Home/GG.jpg"
+    },
   ];
 
   const featuredNews = latestNews[0];
-  const recentNews = latestNews.slice(1, 4);
-  const sidebarNews = latestNews.slice(4);
+  const recentNews = latestNews.slice(1, 7);
+  const sidebarNews = latestNews.slice(7);
 
   return (
     <div className="homepage">
@@ -82,15 +114,15 @@ const HomePage = () => {
             {/* Featured News */}
             <section className="featured-section">
               <h2>Breaking News</h2>
-              <article className="featured-article">
-                <img src="Home/Trump.jpg" alt={featuredNews.title} />
+              <Link href={`/news/${featuredNews.id}`} className="featured-article">
+                <img src={featuredNews.imageUrl} alt={featuredNews.title} />
                 <div className="featured-content">
                   <span className="category">{featuredNews.category}</span>
                   <h3>{featuredNews.title}</h3>
                   <p>{featuredNews.summary}</p>
                   <span className="timestamp">{featuredNews.timestamp}</span>
                 </div>
-              </article>
+              </Link>
             </section>
 
             {/* Recent News Grid */}
@@ -98,7 +130,7 @@ const HomePage = () => {
               <h2>Latest Updates</h2>
               <div className="news-grid">
                 {recentNews.map(news => (
-                  <article key={news.id} className="news-card">
+                  <Link key={news.id} href={`/news/${news.id}`} className="news-card">
                     <img src={news.imageUrl} alt={news.title} />
                     <div className="card-content">
                       <span className="category">{news.category}</span>
@@ -106,7 +138,7 @@ const HomePage = () => {
                       <p>{news.summary}</p>
                       <span className="timestamp">{news.timestamp}</span>
                     </div>
-                  </article>
+                  </Link>
                 ))}
               </div>
             </section>
@@ -116,14 +148,14 @@ const HomePage = () => {
               <div className="sidebar-section">
                 <h3>Trending Now</h3>
                 {sidebarNews.map(news => (
-                  <article key={news.id} className="sidebar-item">
+                  <Link key={news.id} href={`/news/${news.id}`} className="sidebar-item">
                     <img src={news.imageUrl} alt={news.title} />
                     <div className="sidebar-content">
                       <span className="category">{news.category}</span>
                       <h5>{news.title}</h5>
                       <span className="timestamp">{news.timestamp}</span>
                     </div>
-                  </article>
+                  </Link>
                 ))}
               </div>
 

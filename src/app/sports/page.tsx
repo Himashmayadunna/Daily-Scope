@@ -1,19 +1,15 @@
 'use client';
 import Link from 'next/link';
-
-interface NewsItem {
-  id: number;
-  title: string;
-  summary: string;
-  category: string;
-  timestamp: string;
-  imageUrl: string;
-}
+import { getNewsByCategory } from '../data/newsData';
 
 const SportsPage = () => {
-  const sportsNews: NewsItem[] = [
+  // Get sports news from our centralized data + create additional sports items
+  const allSportsNews = getNewsByCategory('Sports');
+  
+  // Create additional sports news items
+  const additionalSportsNews = [
     {
-      id: 1,
+      id: 201,
       title: "World Cup Qualifiers Produce Stunning Upsets",
       summary: "Underdog nations secure crucial victories while traditional powerhouses struggle in dramatic qualification matches.",
       category: "Sports",
@@ -21,7 +17,7 @@ const SportsPage = () => {
       imageUrl: "SP/WC.jpg"
     },
     {
-      id: 2,
+      id: 202,
       title: "Tennis Sensation Wins First Grand Slam at Age 19",
       summary: "Rising star defeats three-time champion in straight sets to claim maiden major title in historic breakthrough.",
       category: "Sports",
@@ -29,7 +25,7 @@ const SportsPage = () => {
       imageUrl: "SP/G.jpg"
     },
     {
-      id: 3,
+      id: 203,
       title: "NBA Trade Blockbuster Reshapes Championship Race",
       summary: "Multi-team deal involving All-Star players creates new title contenders and shifts playoff predictions.",
       category: "Sports",
@@ -37,7 +33,7 @@ const SportsPage = () => {
       imageUrl: "SP/BB.webp"
     },
     {
-      id: 4,
+      id: 204,
       title: "Olympic Swimming Records Fall at National Championships",
       summary: "Multiple world records broken as swimmers prepare for international competition with exceptional performances.",
       category: "Sports",
@@ -45,7 +41,7 @@ const SportsPage = () => {
       imageUrl: "SP/SW.jpg"
     },
     {
-      id: 5,
+      id: 205,
       title: "Boxing Match Generates $200 Million in Revenue",
       summary: "Heavyweight championship bout breaks pay-per-view records with global audience exceeding 50 million viewers.",
       category: "Sports",
@@ -53,7 +49,7 @@ const SportsPage = () => {
       imageUrl: "SP/BM.jpg"
     },
     {
-      id: 6,
+      id: 206,
       title: "Formula 1 Season Finale Promises Title Drama",
       summary: "Championship leaders separated by just three points heading into final race at iconic Monaco circuit.",
       category: "Sports",
@@ -61,7 +57,7 @@ const SportsPage = () => {
       imageUrl: "SP/F.jpg"
     },
     {
-      id: 7,
+      id: 207,
       title: "Women's Soccer League Expands to 16 Teams",
       summary: "Professional women's football adds four new franchises as popularity and attendance reach record levels.",
       category: "Sports",
@@ -69,7 +65,7 @@ const SportsPage = () => {
       imageUrl: "SP/WS.png"
     },
     {
-      id: 8,
+      id: 208,
       title: "Esports Tournament Offers $10 Million Prize Pool",
       summary: "Competitive gaming reaches new heights with largest purse in tournament history and global streaming audience.",
       category: "Sports",
@@ -77,7 +73,7 @@ const SportsPage = () => {
       imageUrl: "SP/ES.webp"
     },
     {
-      id: 9,
+      id: 209,
       title: "Marathon World Record Broken by 30 Seconds",
       summary: "Kenyan runner shatters long-standing mark in perfect conditions with revolutionary pacing strategy.",
       category: "Sports",
@@ -85,7 +81,7 @@ const SportsPage = () => {
       imageUrl: "SP/M.jpg"
     },
     {
-      id: 10,
+      id: 210,
       title: "High School Athlete Signs Historic Endorsement Deal",
       summary: "Basketball prodigy becomes youngest player ever to receive major sponsorship before college career.",
       category: "Sports",
@@ -94,9 +90,12 @@ const SportsPage = () => {
     }
   ];
 
+  // Combine all sports news
+  const sportsNews = [...allSportsNews, ...additionalSportsNews];
+
   const featuredNews = sportsNews[0];
-  const recentNews = sportsNews.slice(1, 4);
-  const sidebarNews = sportsNews.slice(4);
+  const recentNews = sportsNews.slice(1, 7);
+  const sidebarNews = sportsNews.slice(7);
 
   return (
     <div className="homepage">
@@ -106,15 +105,17 @@ const SportsPage = () => {
             {/* Featured News */}
             <section className="featured-section">
               <h2>Sports Headlines</h2>
-              <article className="featured-article">
-                <img src={featuredNews.imageUrl} alt={featuredNews.title} />
-                <div className="featured-content">
-                  <span className="category">{featuredNews.category}</span>
-                  <h3>{featuredNews.title}</h3>
-                  <p>{featuredNews.summary}</p>
-                  <span className="timestamp">{featuredNews.timestamp}</span>
-                </div>
-              </article>
+              <Link href={`/news/${featuredNews.id}`} className="clickable-item">
+                <article className="featured-article">
+                  <img src={featuredNews.imageUrl} alt={featuredNews.title} />
+                  <div className="featured-content">
+                    <span className="category">{featuredNews.category}</span>
+                    <h3>{featuredNews.title}</h3>
+                    <p>{featuredNews.summary}</p>
+                    <span className="timestamp">{featuredNews.timestamp}</span>
+                  </div>
+                </article>
+              </Link>
             </section>
 
             {/* Recent News Grid */}
@@ -122,15 +123,17 @@ const SportsPage = () => {
               <h2>Latest Scores & Updates</h2>
               <div className="news-grid">
                 {recentNews.map(news => (
-                  <article key={news.id} className="news-card">
-                    <img src={news.imageUrl} alt={news.title} />
-                    <div className="card-content">
-                      <span className="category">{news.category}</span>
-                      <h4>{news.title}</h4>
-                      <p>{news.summary}</p>
-                      <span className="timestamp">{news.timestamp}</span>
-                    </div>
-                  </article>
+                  <Link key={news.id} href={`/news/${news.id}`} className="clickable-item">
+                    <article className="news-card">
+                      <img src={news.imageUrl} alt={news.title} />
+                      <div className="card-content">
+                        <span className="category">{news.category}</span>
+                        <h4>{news.title}</h4>
+                        <p>{news.summary}</p>
+                        <span className="timestamp">{news.timestamp}</span>
+                      </div>
+                    </article>
+                  </Link>
                 ))}
               </div>
             </section>
@@ -140,14 +143,16 @@ const SportsPage = () => {
               <div className="sidebar-section">
                 <h3>More Sports News</h3>
                 {sidebarNews.map(news => (
-                  <article key={news.id} className="sidebar-item">
-                    <img src={news.imageUrl} alt={news.title} />
-                    <div className="sidebar-content">
-                      <span className="category">{news.category}</span>
-                      <h5>{news.title}</h5>
-                      <span className="timestamp">{news.timestamp}</span>
-                    </div>
-                  </article>
+                  <Link key={news.id} href={`/news/${news.id}`} className="clickable-item">
+                    <article className="sidebar-item">
+                      <img src={news.imageUrl} alt={news.title} />
+                      <div className="sidebar-content">
+                        <span className="category">{news.category}</span>
+                        <h5>{news.title}</h5>
+                        <span className="timestamp">{news.timestamp}</span>
+                      </div>
+                    </article>
+                  </Link>
                 ))}
               </div>
 
