@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getNewsByCategory } from '../data/newsData';
 
 const SportsPage = () => {
@@ -14,7 +15,7 @@ const SportsPage = () => {
       summary: "Underdog nations secure crucial victories while traditional powerhouses struggle in dramatic qualification matches.",
       category: "Sports",
       timestamp: "15 minutes ago",
-      imageUrl: "SP/WC.jpg"
+      imageUrl: "/SP/WC.jpg"
     },
     {
       id: 202,
@@ -22,7 +23,7 @@ const SportsPage = () => {
       summary: "Rising star defeats three-time champion in straight sets to claim maiden major title in historic breakthrough.",
       category: "Sports",
       timestamp: "1 hour ago",
-      imageUrl: "SP/G.jpg"
+      imageUrl: "/SP/G.jpg"
     },
     {
       id: 203,
@@ -30,7 +31,7 @@ const SportsPage = () => {
       summary: "Multi-team deal involving All-Star players creates new title contenders and shifts playoff predictions.",
       category: "Sports",
       timestamp: "3 hours ago",
-      imageUrl: "SP/BB.webp"
+      imageUrl: "/SP/BB.webp"
     },
     {
       id: 204,
@@ -38,7 +39,7 @@ const SportsPage = () => {
       summary: "Multiple world records broken as swimmers prepare for international competition with exceptional performances.",
       category: "Sports",
       timestamp: "5 hours ago",
-      imageUrl: "SP/SW.jpg"
+      imageUrl: "/SP/SW.jpg"
     },
     {
       id: 205,
@@ -46,7 +47,7 @@ const SportsPage = () => {
       summary: "Heavyweight championship bout breaks pay-per-view records with global audience exceeding 50 million viewers.",
       category: "Sports",
       timestamp: "7 hours ago",
-      imageUrl: "SP/BM.jpg"
+      imageUrl: "/SP/BM.jpg"
     },
     {
       id: 206,
@@ -54,7 +55,7 @@ const SportsPage = () => {
       summary: "Championship leaders separated by just three points heading into final race at iconic Monaco circuit.",
       category: "Sports",
       timestamp: "9 hours ago",
-      imageUrl: "SP/F.jpg"
+      imageUrl: "/SP/F.jpg"
     },
     {
       id: 207,
@@ -62,7 +63,7 @@ const SportsPage = () => {
       summary: "Professional women's football adds four new franchises as popularity and attendance reach record levels.",
       category: "Sports",
       timestamp: "11 hours ago",
-      imageUrl: "SP/WS.png"
+      imageUrl: "/SP/WS.png"
     },
     {
       id: 208,
@@ -70,7 +71,7 @@ const SportsPage = () => {
       summary: "Competitive gaming reaches new heights with largest purse in tournament history and global streaming audience.",
       category: "Sports",
       timestamp: "13 hours ago",
-      imageUrl: "SP/ES.webp"
+      imageUrl: "/SP/ES.webp"
     },
     {
       id: 209,
@@ -78,7 +79,7 @@ const SportsPage = () => {
       summary: "Kenyan runner shatters long-standing mark in perfect conditions with revolutionary pacing strategy.",
       category: "Sports",
       timestamp: "15 hours ago",
-      imageUrl: "SP/M.jpg"
+      imageUrl: "/SP/M.jpg"
     },
     {
       id: 210,
@@ -86,7 +87,7 @@ const SportsPage = () => {
       summary: "Basketball prodigy becomes youngest player ever to receive major sponsorship before college career.",
       category: "Sports",
       timestamp: "17 hours ago",
-      imageUrl: "SP/HA.jpg"
+      imageUrl: "/SP/HA.jpg"
     }
   ];
 
@@ -107,7 +108,13 @@ const SportsPage = () => {
               <h2>Sports Headlines</h2>
               <Link href={`/news/${featuredNews.id}`} className="clickable-item">
                 <article className="featured-article">
-                  <img src={featuredNews.imageUrl} alt={featuredNews.title} />
+                  <Image 
+                    src={featuredNews.imageUrl} 
+                    alt={featuredNews.title} 
+                    width={600} 
+                    height={450}
+                    className="featured-image"
+                  />
                   <div className="featured-content">
                     <span className="category">{featuredNews.category}</span>
                     <h3>{featuredNews.title}</h3>
@@ -125,7 +132,13 @@ const SportsPage = () => {
                 {recentNews.map(news => (
                   <Link key={news.id} href={`/news/${news.id}`} className="clickable-item">
                     <article className="news-card">
-                      <img src={news.imageUrl} alt={news.title} />
+                      <Image 
+                        src={news.imageUrl} 
+                        alt={news.title} 
+                        width={300} 
+                        height={200}
+                        className="card-image"
+                      />
                       <div className="card-content">
                         <span className="category">{news.category}</span>
                         <h4>{news.title}</h4>
@@ -145,7 +158,13 @@ const SportsPage = () => {
                 {sidebarNews.map(news => (
                   <Link key={news.id} href={`/news/${news.id}`} className="clickable-item">
                     <article className="sidebar-item">
-                      <img src={news.imageUrl} alt={news.title} />
+                      <Image 
+                        src={news.imageUrl} 
+                        alt={news.title} 
+                        width={100} 
+                        height={80}
+                        className="sidebar-image"
+                      />
                       <div className="sidebar-content">
                         <span className="category">{news.category}</span>
                         <h5>{news.title}</h5>

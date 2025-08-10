@@ -106,14 +106,16 @@ body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.featured-article img {
+.featured-article img,
+.featured-article .featured-image {
   width: 100%;
   height: 450px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.featured-article:hover img {
+.featured-article:hover img,
+.featured-article:hover .featured-image {
   transform: scale(1.05);
 }
 

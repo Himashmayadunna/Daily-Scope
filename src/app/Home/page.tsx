@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface NewsItem {
   id: number;
@@ -115,7 +116,13 @@ const HomePage = () => {
             <section className="featured-section">
               <h2>Breaking News</h2>
               <Link href={`/news/${featuredNews.id}`} className="featured-article">
-                <img src={featuredNews.imageUrl} alt={featuredNews.title} />
+                <Image 
+                  src={featuredNews.imageUrl} 
+                  alt={featuredNews.title} 
+                  width={600} 
+                  height={450}
+                  className="featured-image"
+                />
                 <div className="featured-content">
                   <span className="category">{featuredNews.category}</span>
                   <h3>{featuredNews.title}</h3>
@@ -131,7 +138,13 @@ const HomePage = () => {
               <div className="news-grid">
                 {recentNews.map(news => (
                   <Link key={news.id} href={`/news/${news.id}`} className="news-card">
-                    <img src={news.imageUrl} alt={news.title} />
+                    <Image 
+                      src={news.imageUrl} 
+                      alt={news.title} 
+                      width={300} 
+                      height={200}
+                      className="card-image"
+                    />
                     <div className="card-content">
                       <span className="category">{news.category}</span>
                       <h4>{news.title}</h4>
@@ -149,7 +162,13 @@ const HomePage = () => {
                 <h3>Trending Now</h3>
                 {sidebarNews.map(news => (
                   <Link key={news.id} href={`/news/${news.id}`} className="sidebar-item">
-                    <img src={news.imageUrl} alt={news.title} />
+                    <Image 
+                      src={news.imageUrl} 
+                      alt={news.title} 
+                      width={100} 
+                      height={80}
+                      className="sidebar-image"
+                    />
                     <div className="sidebar-content">
                       <span className="category">{news.category}</span>
                       <h5>{news.title}</h5>
